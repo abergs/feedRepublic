@@ -1,0 +1,172 @@
+/*
+ * Globals
+ */
+
+/* Links */
+a,
+a:focus,
+a:hover {
+  color: #fff;
+}
+
+/* Custom default button */
+.btn-default,
+.btn-default:hover,
+.btn-default:focus {
+  color: #344;
+  text-shadow: none; /* Prevent inheritence from `body` */
+  background-color: #fff;
+  border: 1px solid #fff;
+}
+
+
+/*
+ * Base structure
+ */
+
+html,
+body {
+  height: 100%;
+  background-color:/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#a0e6d9+0,1ecad0+0,2b356d+0,9ee4d7+5,99e5da+5,9ae4d9+7,93dfd1+8,93dfd4+8,90dcce+8,8fddd0+9,88dacb+11,86dcce+12,80d4c3+13,7ed6c4+14,7bd7c8+15,74d4c1+15,7bd7c8+15,70d4c0+17,68d6be+17,5fd7bd+18,38e6c0+22,41e1c1+22,37e5c2+23,3ae6c7+23,44e0c6+24,3ce2c9+25,3ce0c2+25,2fe5c1+26,2de5c0+27,2fe5c7+28,2de5c6+28,24e4ca+29,2fe1c6+30,24e4ca+34,21e1ca+35,20e4cd+35,1ddfcf+37,58dccd+37,37c6cd+40,1dd9d6+40,1dbcc7+46,209db6+49,1da6bb+49,269eb6+49,1c96b4+51,187cae+54,207caa+54,1a70a6+55,1e6da6+55,1965a3+57,23609d+58,1467a2+59,135699+62,21cccf+67,21cccf+67,134c9b+74,237eaf+78,1b4289+81,21307b+83,21307b+83,21307b+89,2b356d+95,2b356d+95 */
+background: #a0e6d9; /* Old browsers */
+background: -moz-linear-gradient(45deg,  #a0e6d9 0%, #1ecad0 0%, #2b356d 0%, #9ee4d7 5%, #99e5da 5%, #9ae4d9 7%, #93dfd1 8%, #93dfd4 8%, #90dcce 8%, #8fddd0 9%, #88dacb 11%, #86dcce 12%, #80d4c3 13%, #7ed6c4 14%, #7bd7c8 15%, #74d4c1 15%, #7bd7c8 15%, #70d4c0 17%, #68d6be 17%, #5fd7bd 18%, #38e6c0 22%, #41e1c1 22%, #37e5c2 23%, #3ae6c7 23%, #44e0c6 24%, #3ce2c9 25%, #3ce0c2 25%, #2fe5c1 26%, #2de5c0 27%, #2fe5c7 28%, #2de5c6 28%, #24e4ca 29%, #2fe1c6 30%, #24e4ca 34%, #21e1ca 35%, #20e4cd 35%, #1ddfcf 37%, #58dccd 37%, #37c6cd 40%, #1dd9d6 40%, #1dbcc7 46%, #209db6 49%, #1da6bb 49%, #269eb6 49%, #1c96b4 51%, #187cae 54%, #207caa 54%, #1a70a6 55%, #1e6da6 55%, #1965a3 57%, #23609d 58%, #1467a2 59%, #135699 62%, #21cccf 67%, #21cccf 67%, #134c9b 74%, #237eaf 78%, #1b4289 81%, #21307b 83%, #21307b 83%, #21307b 89%, #2b356d 95%, #2b356d 95%); /* FF3.6+ */
+background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#a0e6d9), color-stop(0%,#1ecad0), color-stop(0%,#2b356d), color-stop(5%,#9ee4d7), color-stop(5%,#99e5da), color-stop(7%,#9ae4d9), color-stop(8%,#93dfd1), color-stop(8%,#93dfd4), color-stop(8%,#90dcce), color-stop(9%,#8fddd0), color-stop(11%,#88dacb), color-stop(12%,#86dcce), color-stop(13%,#80d4c3), color-stop(14%,#7ed6c4), color-stop(15%,#7bd7c8), color-stop(15%,#74d4c1), color-stop(15%,#7bd7c8), color-stop(17%,#70d4c0), color-stop(17%,#68d6be), color-stop(18%,#5fd7bd), color-stop(22%,#38e6c0), color-stop(22%,#41e1c1), color-stop(23%,#37e5c2), color-stop(23%,#3ae6c7), color-stop(24%,#44e0c6), color-stop(25%,#3ce2c9), color-stop(25%,#3ce0c2), color-stop(26%,#2fe5c1), color-stop(27%,#2de5c0), color-stop(28%,#2fe5c7), color-stop(28%,#2de5c6), color-stop(29%,#24e4ca), color-stop(30%,#2fe1c6), color-stop(34%,#24e4ca), color-stop(35%,#21e1ca), color-stop(35%,#20e4cd), color-stop(37%,#1ddfcf), color-stop(37%,#58dccd), color-stop(40%,#37c6cd), color-stop(40%,#1dd9d6), color-stop(46%,#1dbcc7), color-stop(49%,#209db6), color-stop(49%,#1da6bb), color-stop(49%,#269eb6), color-stop(51%,#1c96b4), color-stop(54%,#187cae), color-stop(54%,#207caa), color-stop(55%,#1a70a6), color-stop(55%,#1e6da6), color-stop(57%,#1965a3), color-stop(58%,#23609d), color-stop(59%,#1467a2), color-stop(62%,#135699), color-stop(67%,#21cccf), color-stop(67%,#21cccf), color-stop(74%,#134c9b), color-stop(78%,#237eaf), color-stop(81%,#1b4289), color-stop(83%,#21307b), color-stop(83%,#21307b), color-stop(89%,#21307b), color-stop(95%,#2b356d), color-stop(95%,#2b356d)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(45deg,  #a0e6d9 0%,#1ecad0 0%,#2b356d 0%,#9ee4d7 5%,#99e5da 5%,#9ae4d9 7%,#93dfd1 8%,#93dfd4 8%,#90dcce 8%,#8fddd0 9%,#88dacb 11%,#86dcce 12%,#80d4c3 13%,#7ed6c4 14%,#7bd7c8 15%,#74d4c1 15%,#7bd7c8 15%,#70d4c0 17%,#68d6be 17%,#5fd7bd 18%,#38e6c0 22%,#41e1c1 22%,#37e5c2 23%,#3ae6c7 23%,#44e0c6 24%,#3ce2c9 25%,#3ce0c2 25%,#2fe5c1 26%,#2de5c0 27%,#2fe5c7 28%,#2de5c6 28%,#24e4ca 29%,#2fe1c6 30%,#24e4ca 34%,#21e1ca 35%,#20e4cd 35%,#1ddfcf 37%,#58dccd 37%,#37c6cd 40%,#1dd9d6 40%,#1dbcc7 46%,#209db6 49%,#1da6bb 49%,#269eb6 49%,#1c96b4 51%,#187cae 54%,#207caa 54%,#1a70a6 55%,#1e6da6 55%,#1965a3 57%,#23609d 58%,#1467a2 59%,#135699 62%,#21cccf 67%,#21cccf 67%,#134c9b 74%,#237eaf 78%,#1b4289 81%,#21307b 83%,#21307b 83%,#21307b 89%,#2b356d 95%,#2b356d 95%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(45deg,  #a0e6d9 0%,#1ecad0 0%,#2b356d 0%,#9ee4d7 5%,#99e5da 5%,#9ae4d9 7%,#93dfd1 8%,#93dfd4 8%,#90dcce 8%,#8fddd0 9%,#88dacb 11%,#86dcce 12%,#80d4c3 13%,#7ed6c4 14%,#7bd7c8 15%,#74d4c1 15%,#7bd7c8 15%,#70d4c0 17%,#68d6be 17%,#5fd7bd 18%,#38e6c0 22%,#41e1c1 22%,#37e5c2 23%,#3ae6c7 23%,#44e0c6 24%,#3ce2c9 25%,#3ce0c2 25%,#2fe5c1 26%,#2de5c0 27%,#2fe5c7 28%,#2de5c6 28%,#24e4ca 29%,#2fe1c6 30%,#24e4ca 34%,#21e1ca 35%,#20e4cd 35%,#1ddfcf 37%,#58dccd 37%,#37c6cd 40%,#1dd9d6 40%,#1dbcc7 46%,#209db6 49%,#1da6bb 49%,#269eb6 49%,#1c96b4 51%,#187cae 54%,#207caa 54%,#1a70a6 55%,#1e6da6 55%,#1965a3 57%,#23609d 58%,#1467a2 59%,#135699 62%,#21cccf 67%,#21cccf 67%,#134c9b 74%,#237eaf 78%,#1b4289 81%,#21307b 83%,#21307b 83%,#21307b 89%,#2b356d 95%,#2b356d 95%); /* Opera 11.10+ */
+background: -ms-linear-gradient(45deg,  #a0e6d9 0%,#1ecad0 0%,#2b356d 0%,#9ee4d7 5%,#99e5da 5%,#9ae4d9 7%,#93dfd1 8%,#93dfd4 8%,#90dcce 8%,#8fddd0 9%,#88dacb 11%,#86dcce 12%,#80d4c3 13%,#7ed6c4 14%,#7bd7c8 15%,#74d4c1 15%,#7bd7c8 15%,#70d4c0 17%,#68d6be 17%,#5fd7bd 18%,#38e6c0 22%,#41e1c1 22%,#37e5c2 23%,#3ae6c7 23%,#44e0c6 24%,#3ce2c9 25%,#3ce0c2 25%,#2fe5c1 26%,#2de5c0 27%,#2fe5c7 28%,#2de5c6 28%,#24e4ca 29%,#2fe1c6 30%,#24e4ca 34%,#21e1ca 35%,#20e4cd 35%,#1ddfcf 37%,#58dccd 37%,#37c6cd 40%,#1dd9d6 40%,#1dbcc7 46%,#209db6 49%,#1da6bb 49%,#269eb6 49%,#1c96b4 51%,#187cae 54%,#207caa 54%,#1a70a6 55%,#1e6da6 55%,#1965a3 57%,#23609d 58%,#1467a2 59%,#135699 62%,#21cccf 67%,#21cccf 67%,#134c9b 74%,#237eaf 78%,#1b4289 81%,#21307b 83%,#21307b 83%,#21307b 89%,#2b356d 95%,#2b356d 95%); /* IE10+ */
+background: linear-gradient(45deg,  #a0e6d9 0%,#1ecad0 0%,#2b356d 0%,#9ee4d7 5%,#99e5da 5%,#9ae4d9 7%,#93dfd1 8%,#93dfd4 8%,#90dcce 8%,#8fddd0 9%,#88dacb 11%,#86dcce 12%,#80d4c3 13%,#7ed6c4 14%,#7bd7c8 15%,#74d4c1 15%,#7bd7c8 15%,#70d4c0 17%,#68d6be 17%,#5fd7bd 18%,#38e6c0 22%,#41e1c1 22%,#37e5c2 23%,#3ae6c7 23%,#44e0c6 24%,#3ce2c9 25%,#3ce0c2 25%,#2fe5c1 26%,#2de5c0 27%,#2fe5c7 28%,#2de5c6 28%,#24e4ca 29%,#2fe1c6 30%,#24e4ca 34%,#21e1ca 35%,#20e4cd 35%,#1ddfcf 37%,#58dccd 37%,#37c6cd 40%,#1dd9d6 40%,#1dbcc7 46%,#209db6 49%,#1da6bb 49%,#269eb6 49%,#1c96b4 51%,#187cae 54%,#207caa 54%,#1a70a6 55%,#1e6da6 55%,#1965a3 57%,#23609d 58%,#1467a2 59%,#135699 62%,#21cccf 67%,#21cccf 67%,#134c9b 74%,#237eaf 78%,#1b4289 81%,#21307b 83%,#21307b 83%,#21307b 89%,#2b356d 95%,#2b356d 95%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a0e6d9', endColorstr='#2b356d',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+}
+body {
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 1px 3px rgba(0,0,0,.5);
+}
+
+/* Extra markup and styles for table-esque vertical and horizontal centering */
+.site-wrapper {
+  display: table;
+  width: 100%;
+  height: 100%; /* For at least Firefox */
+  min-height: 100%;
+  -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+          box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+}
+.site-wrapper-inner {
+  display: table-cell;
+  vertical-align: top;
+}
+.cover-container {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Padding for spacing */
+.inner {
+  padding: 30px;
+}
+
+
+/*
+ * Header
+ */
+.masthead-brand {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.masthead-nav > li {
+  display: inline-block;
+}
+.masthead-nav > li + li {
+  margin-left: 20px;
+}
+.masthead-nav > li > a {
+  padding-right: 0;
+  padding-left: 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff; /* IE8 proofing */
+  color: rgba(255,255,255,.75);
+  border-bottom: 2px solid transparent;
+}
+.masthead-nav > li > a:hover,
+.masthead-nav > li > a:focus {
+  background-color: transparent;
+  border-bottom-color: #a9a9a9;
+  border-bottom-color: rgba(255,255,255,.25);
+}
+.masthead-nav > .active > a,
+.masthead-nav > .active > a:hover,
+.masthead-nav > .active > a:focus {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+
+@media (min-width: 768px) {
+  .masthead-brand {
+    float: left;
+  }
+  .masthead-nav {
+    float: right;
+  }
+}
+
+
+/*
+ * Cover
+ */
+
+.cover {
+  padding: 0 20px;
+}
+.cover .btn-lg {
+  padding: 4px 8px;
+  font-weight: bold;
+}
+
+
+/*
+ * Footer
+ */
+
+.mastfoot {
+  color: #999; /* IE8 proofing */
+  color: rgba(255,255,255,.5);
+}
+
+
+/*
+ * Affix and center
+ */
+
+@media (min-width: 768px) {
+  /* Pull out the header and footer */
+  .masthead {
+    position: fixed;
+    top: 0;
+  }
+  .mastfoot {
+    position: fixed;
+    bottom: 0;
+  }
+  /* Start the vertical centering */
+  .site-wrapper-inner {
+    vertical-align: middle;
+  }
+  /* Handle the widths */
+  .masthead,
+  .mastfoot,
+  .cover-container {
+    width: 100%; /* Must be percentage or pixels for horizontal alignment */
+  }
+}
+
+@media (min-width: 992px) {
+  .masthead,
+  .mastfoot,
+  .cover-container {
+    width: 700px;
+  }
+}
