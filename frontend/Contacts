@@ -42,64 +42,18 @@
               <h1 class="masthead-brand">FeedRepublic</h1>
               <nav>
                 <ul class="nav masthead-nav">
-                
+                  <li class="active"><a href="#">Home</a></li>
                   <li class="active"><a href="#">World's insta</a></li>
-                
+                  <li class="active"><a href="#">About us</a></li>
                 </ul>
               </nav>
             </div>
           </div>
-
-          <div class="inner cover">
-            <h1 class="cover-heading">Hello.</h1>
-            <p class="lead">This is where you can make the most out of your instagram, and where you can see the best to do to make your instagram go <strong>BEAUTIFUL!!</strong></p>
-            <p class="lead">
-            <style>
-            {
-    width: 6px;
-    height: 3px;
-    background-color: none;
-    box-shadow: 0.6px 10px 5px #888888;
-}
-</style>
-              <button type="button" class="btn btn-default navbar-btn"> <a href="#" class="btn btn-lg btn-default"><IMG SRC="instagram.png"> login</IMG> </a></a></button>
-           
-
-            </p>
           </div>
-
-          <div class="mastfoot">
-            <div class="inner">
-              <p><strong>Copy rights:The Feed Geeks</strong>
-              
-              </p>
-            </div>
           </div>
-
-        </div>
-
-      </div>
-
-    
-    </IMG>
-
-    
-
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="js/ie10-viewport-bug-workaround.js"></script>
-<footer>
-    <ul id="footer-links">
-    <li> <a href="About us.html"> About</a>
-    </li>
-    <li> <a href="Contacts.html"> Contact us </a>
-    </ul>
-    </footer>
-    </div>
-  </body>
-</html>
+          </div>
+          </body>
+          </script>
+          </head>
+          </html>
+          

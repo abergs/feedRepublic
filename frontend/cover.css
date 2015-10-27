@@ -8,13 +8,16 @@ a:focus,
 a:hover {
   color: #fff;
 }
+CSS selector {
+  font-family: 'Font Name', arial;
+}
 
 /* Custom default button */
 .btn-default,
 .btn-default:hover,
 .btn-default:focus {
   color: #344;
-  text-shadow: none; /* Prevent inheritence from `body` */
+  text-shadow: 0.4; /* Prevent inheritence from `body` */
   background-color: #fff;
   border: 1px solid #fff;
 }
@@ -74,6 +77,8 @@ body {
 .masthead-brand {
   margin-top: 5px;
   margin-bottom: 5px;
+margin-right: 100px;
+
 }
 
 .masthead-nav > li {
@@ -82,15 +87,20 @@ body {
 .masthead-nav > li + li {
   margin-left: 20px;
 }
+p {
+    font-family:Arial;
+}
 .masthead-nav > li > a {
   padding-right: 0;
   padding-left: 0;
   font-size: 16px;
   font-weight: bold;
+  font-style: Arial;
   color: #fff; /* IE8 proofing */
   color: rgba(255,255,255,.75);
   border-bottom: 2px solid transparent;
 }
+.Mac{font-color:#142D29;}
 .masthead-nav > li > a:hover,
 .masthead-nav > li > a:focus {
   background-color: transparent;
@@ -104,7 +114,7 @@ body {
   border-bottom-color: #fff;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 700px) {
   .masthead-brand {
     float: left;
   }
@@ -122,9 +132,13 @@ body {
   padding: 0 20px;
 }
 .cover .btn-lg {
-  padding: 4px 8px;
+  padding: 0px 0px;
   font-weight: bold;
 }
+
+#footer-links{position: fixed; left:0; bottom: 0;}
+
+  
 
 
 /*
@@ -141,7 +155,7 @@ body {
  * Affix and center
  */
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   /* Pull out the header and footer */
   .masthead {
     position: fixed;
@@ -167,6 +181,6 @@ body {
   .masthead,
   .mastfoot,
   .cover-container {
-    width: 700px;
+    width: 992px;
   }
 }
