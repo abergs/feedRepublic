@@ -24,6 +24,91 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+     <!-- google chart Geo -->
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+  <script>
+    google.load('visualization', '1', { 'packages': ['map'] });
+    google.setOnLoadCallback(drawMap);
+
+    function drawMap() {
+      var data = google.visualization.arrayToDataTable([
+        ['Country', 'Population'],
+        ['Sweden', 'SWEDEN, SIERRA: 5,003'],
+        ['UK', 'UK, HUDSON: 620,000'],
+        ['US', 'US: HEFE 842,000'],
+      ]);
+
+    var options = { showTip: true };
+
+    var map = new google.visualization.Map(document.getElementById('chart_div'));
+
+    map.draw(data, options);
+  };
+  </script>
+     <!-- google chart Geo -->
+    
+    <!-- google chart Dashboard -->
+     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+
+      // Load the Visualization API and the controls package.
+      google.load('visualization', '1.0', {'packages':['controls']});
+
+      // Set a callback to run when the Google Visualization API is loaded.
+      google.setOnLoadCallback(drawDashboard);
+
+      // Callback that creates and populates a data table,
+      // instantiates a dashboard, a range slider and a pie chart,
+      // passes in the data and draws it.
+      function drawDashboard() {
+
+        // Create our data table.
+        var data = google.visualization.arrayToDataTable([
+          ['Name', 'Donuts eaten'],
+          ['Michael' , 5],
+          ['Elisa', 7],
+          ['Robert', 3],
+          ['John', 2],
+          ['Jessica', 6],
+          ['Aaron', 1],
+          ['Margareth', 8]
+        ]);
+
+        // Create a dashboard.
+        var dashboard = new google.visualization.Dashboard(
+            document.getElementById('dashboard_div'));
+
+        // Create a range slider, passing some options
+        var donutRangeSlider = new google.visualization.ControlWrapper({
+          'controlType': 'CategoryFilter',
+          'containerId': 'filter_div',
+          'options': {
+            'filterColumnLabel': 'Donuts eaten'
+          }
+        });
+
+        // Create a pie chart, passing some options
+        var pieChart = new google.visualization.ChartWrapper({
+          'chartType': 'PieChart',
+          'containerId': 'chart_div1',
+          'options': {
+            'width': 300,
+            'height': 300,
+            'pieSliceText': 'value',
+            'legend': 'right'
+          }
+        });
+
+        // Establish dependencies, declaring that 'filter' drives 'pieChart',
+        // so that the pie chart will only display entries that are let through
+        // given the chosen slider range.
+        dashboard.bind(donutRangeSlider, pieChart);
+
+        // Draw the dashboard.
+        dashboard.draw(data);
+      }
+    </script>
+    <!-- google chart Dashboard -->
 </head>
 
 <body>
@@ -54,52 +139,61 @@
             </div>
             <!-- /.navbar-collapse -->
         </div>
-        <!-- /.container -->
+       
     </nav>
 
-    <!-- Page Content -->
+     <!-- /.container -->
     <div class="container">
 
         <!-- Team Members Row -->
         <div class="row">
-            <div class="col-lg-12">
+            <div class="col-lg-12 text-center">
                 <h2 class="page-header">Your Feed Nation</h2>
             </div>
-            <div class="col-lg-4 col-sm-6 text-center">
-                <img class="img-circle img-responsive img-center" src="http://placehold.it/200x200" alt="">
-                <h3>John Smith
-                    <small>Job Title</small>
-                </h3>
-                <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
+            <div class="col-lg-5 col-sm-5 text-left">
+                <h3>MOST USED TAGS BY COUNTRY</h3>
+                <p>Hover over each country to see which is the most used tag, the info is being updated every minute</p>
             </div>
-            <div class="col-lg-4 col-sm-6 text-center">
-                <img class="img-circle img-responsive img-center" src="http://placehold.it/200x200" alt="">
-                <h3>John Smith
-                    <small>Job Title</small>
-                </h3>
-                <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
+            <div class="col-lg-5 col-sm-5 text-center">
+                <div id="chart_div" style="width: 600px; height: 400px;"></div>
             </div>
-            <div class="col-lg-4 col-sm-6 text-center">
-                <img class="img-circle img-responsive img-center" src="http://placehold.it/200x200" alt="">
-                <h3>John Smith
-                    <small>Job Title</small>
-                </h3>
-                <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
-            </div>
+            <div class="col-lg-1 col-sm-1 text-center">
         </div>
 
         <hr>
+       </div>
     </div>
+
     <!-- /.container -->
+
+<!-- /.Dashboard -->
+    <div class="container">
+
+        <!-- Team Members Row -->
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="page-header"></h2>
+            </div>
+            <!--Div that will hold the dashboard-->
+    <div id="dashboard_div">
+      <!--Divs that will hold each control and chart-->
+      <div id="categoryPicker_div"></div>
+      <div id="filter_div"></div>
+      <div id="chart_div1"></div>
+    </div>
+    </div>
+    </div>    
+
+    <!-- /.dashboard -->
 <!-- Footer -->
         <footer>
             <div class="container">
                  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><div class="bullet"></div><a href="#">Home</a></li>
-        <li><div class="bullet"></div><a href="#">About Us</a></li>
-        <li><div class="bullet"></div><a href="#">World stats</a></li>
-        <li><div class="bullet"></div><a href="#">Contact</a><div class="bullet"></div></li>
+        <li class="active"><div class="bullet"></div><a href="index_1.html">Home</a></li>
+        <li><div class="bullet"></div><a href="About_us_1.html">About Us</a></li>
+        <li><div class="bullet"></div><a href="world.html">World stats</a></li>
+        <li><div class="bullet"></div><a href="conctacs_1.html">Contact</a><div class="bullet"></div></li>
       </ul>
                  </div>
             <!-- /.row -->
