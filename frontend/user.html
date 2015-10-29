@@ -24,28 +24,27 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     
-    <!-- GOOGLE CHART1 -->
+    <!-- GOOGLE CHART1/FEDJA -->
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">
       google.load("visualization", "1", {packages:["corechart"]});
       google.setOnLoadCallback(drawChart);
       function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['Filter', 'Hours per Day'],
-          ['Sierra',     270],
-          ['Hudson',     400],
-          ['Early Bird', 350],
-          ['Toaster',     76],
-          ['Hefe',       737]
-        ]);
-
-        var options = {
-          title: 'Most used Filters',
-          pieHole: 0.4,
-        };
-
-        var chart = new google.visualization.PieChart(document.getElementById('donutchart1'));
-        chart.draw(data, options);
+          
+            var username = "abergs";
+            $.getJSON( "http://feedrepublic.azurewebsites.net/api/popular-topics/"+username, function( data ) {
+                 // put data into the graph
+                 var dataTable = google.visualization.arrayToDataTable(data);
+                  
+                    var options = {
+                        title: 'Most common topics',
+                        pieHole: 0.4,
+                    };
+                 
+                 var chart = new google.visualization.PieChart(document.getElementById('donutchart1'));
+                chart.draw(dataTable, options);
+                 
+             });
       }
     </script>  
     <!-- GOOGLE CHART1 -->
