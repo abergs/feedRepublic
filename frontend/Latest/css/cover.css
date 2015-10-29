@@ -6,7 +6,7 @@
 a,
 a:focus,
 a:hover {
-  color: #333;
+  color: #fff;
 }
 
 /* Custom default button */
@@ -27,13 +27,16 @@ a:hover {
 html,
 body {
   height: 100%;
-  background-color: #fff;
+  background-color: #333;
 }
 body {
-  color: #333;
+  color: #fff;
   text-align: center;
   text-shadow: 0 1px 3px rgba(0,0,0,.5);
 }
+
+
+
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
 .site-wrapper {
@@ -160,54 +163,4 @@ body {
   .cover-container {
     width: 700px;
   }
-}
-.Mac { 
-  margin:0 
-  auto;width: 600px; 
-  background-color:#ffffff;
-  height: 600px;
-  font-color:black;
-  border-color:#ffffff;
-  border-radius: 25px;
-  box-shadow: inset 0 0 100 #ffffff;
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-top:40px; 
-  margin-top: 30px; 
-  margin-bottom: 30px;
-opacity:0.8;font-size:21px;  
-font-weight: bolder; text-align: justify;
-         -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
-         -moz-animation: fadein 2s; /* Firefox < 16 */
-         -ms-animation: fadein 2s; /* Internet Explorer */
-         -o-animation: fadein 2s; /* Opera < 12.1 */
-            animation: fadein 2s; }
-            @keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 0.8; }
-}
-p{color: #102D28;}
-
-/* Firefox < 16 */
-@-moz-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 0.8; }
-}
-
-/* Safari, Chrome and Opera > 12.1 */
-@-webkit-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 0.8; }
-}
-
-/* Internet Explorer */
-@-ms-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 0.8; }
-}
-
-/* Opera < 12.1 */
-@-o-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 0.8; }
 }
