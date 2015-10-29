@@ -30,10 +30,11 @@
       google.load("visualization", "1", {packages:["corechart"]});
       google.setOnLoadCallback(drawChart);
       function drawChart() {
-          
+            
             var username = "abergs";
             $.getJSON( "http://feedrepublic.azurewebsites.net/api/popular-topics/"+username, function( data ) {
-                 // put data into the graph
+                 // put data into the graph                  
+                 data= data.slice(0,5);
                  data.unshift(["filter","number"]);
                  var dataTable = google.visualization.arrayToDataTable(data);
                   
@@ -58,13 +59,14 @@
       function drawChart() {
           
             var username = "abergs";
-            $.getJSON( "http://feedrepublic.azurewebsites.net/api/popular-topics/"+username, function( data ) {
+            $.getJSON( "http://feedrepublic.azurewebsites.net/api/popular-filters/"+username, function( data ) {
                  // put data into the graph
+                 data= data.slice(0,5);
                  data.unshift(["filter","number"]);
                  var dataTable = google.visualization.arrayToDataTable(data);
                   
                     var options = {
-                        title: 'Most common topics',
+                        title: 'Most common filter',
                         pieHole: 0.4,
                     };
                  
@@ -86,6 +88,7 @@
             var username = "abergs";
             $.getJSON( "http://feedrepublic.azurewebsites.net/api/popular-topics/"+username, function( data ) {
                  // put data into the graph
+                 data= data.slice(0,5);
                  data.unshift(["filter","number"]);
                  var dataTable = google.visualization.arrayToDataTable(data);
                   
@@ -111,6 +114,7 @@
             var username = "abergs";
             $.getJSON( "http://feedrepublic.azurewebsites.net/api/popular-topics/"+username, function( data ) {
                  // put data into the graph
+                 data= data.slice(0,5);
                  data.unshift(["filter","number"]);
                  var dataTable = google.visualization.arrayToDataTable(data);
                   
@@ -136,6 +140,7 @@
             var username = "abergs";
             $.getJSON( "http://feedrepublic.azurewebsites.net/api/popular-topics/"+username, function( data ) {
                  // put data into the graph
+                 data= data.slice(0,5);
                  data.unshift(["filter","number"]);
                  var dataTable = google.visualization.arrayToDataTable(data);
                   
