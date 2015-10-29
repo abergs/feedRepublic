@@ -5,7 +5,7 @@
  */
 
 body {
-    padding-top: 10px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    padding-top: 40px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
 }
 
 .img-center {
@@ -15,3 +15,6 @@ body {
 footer {
     margin: 50px 0;
 }
+.Mac{margin: auto;
+width: 80%;
+text-align: center;}
