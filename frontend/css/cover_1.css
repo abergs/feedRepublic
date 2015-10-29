@@ -3,11 +3,7 @@
  */
 
 /* Links */
-a,
-a:focus,
-a:hover {
-  color: #333;
-}
+
 .inner-cover{
 margin: auto;
 width: 80%;
