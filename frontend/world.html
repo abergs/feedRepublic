@@ -24,91 +24,165 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-     <!-- google chart Geo -->
-    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-  <script>
-    google.load('visualization', '1', { 'packages': ['map'] });
-    google.setOnLoadCallback(drawMap);
-
-    function drawMap() {
-      var data = google.visualization.arrayToDataTable([
-        ['Country', 'Population'],
-        ['Sweden', 'SWEDEN, SIERRA: 5,003'],
-        ['UK', 'UK, HUDSON: 620,000'],
-        ['US', 'US: HEFE 842,000'],
-      ]);
-
-    var options = { showTip: true };
-
-    var map = new google.visualization.Map(document.getElementById('chart_div'));
-
-    map.draw(data, options);
-  };
-  </script>
-     <!-- google chart Geo -->
-    
-    <!-- google chart Dashboard -->
+     <!-- google chart1 -->
      <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">
+     google.load('visualization', '1', {
+    packages: ['corechart', 'bar']
+});
+google.setOnLoadCallback(drawBasic);
 
-      // Load the Visualization API and the controls package.
-      google.load('visualization', '1.0', {'packages':['controls']});
+function drawBasic() {
 
-      // Set a callback to run when the Google Visualization API is loaded.
-      google.setOnLoadCallback(drawDashboard);
+    var data = google.visualization.arrayToDataTable([
+        ['City', '2010 Population', ],
+        ['New York City, NY', 8175000],
+        ['Los Angeles, CA', 3792000],
+        ['Chicago, IL', 2695000],
+        ['Houston, TX', 2099000],
+        ['Philadelphia, PA', 1526000]
+    ]);
 
-      // Callback that creates and populates a data table,
-      // instantiates a dashboard, a range slider and a pie chart,
-      // passes in the data and draws it.
-      function drawDashboard() {
+    var options = {
+        title: 'Population of Largest U.S. Cities',
+        chartArea: {
+            width: '50%'
+        },
+        hAxis: {
+            title: 'Total Population',
+            minValue: 0
+        },
+        vAxis: {
+            title: 'City'
+        }
+    };
 
-        // Create our data table.
-        var data = google.visualization.arrayToDataTable([
-          ['Name', 'Donuts eaten'],
-          ['Michael' , 5],
-          ['Elisa', 7],
-          ['Robert', 3],
-          ['John', 2],
-          ['Jessica', 6],
-          ['Aaron', 1],
-          ['Margareth', 8]
-        ]);
+    var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
 
-        // Create a dashboard.
-        var dashboard = new google.visualization.Dashboard(
-            document.getElementById('dashboard_div'));
+    chart.draw(data, options);
+}
+    </script>  
+     <!-- end google chart1 -->
+     
+     <!-- google chart2 -->
+     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+     google.load('visualization', '1', {
+    packages: ['corechart', 'bar']
+});
+google.setOnLoadCallback(drawBasic);
 
-        // Create a range slider, passing some options
-        var donutRangeSlider = new google.visualization.ControlWrapper({
-          'controlType': 'CategoryFilter',
-          'containerId': 'filter_div',
-          'options': {
-            'filterColumnLabel': 'Donuts eaten'
-          }
-        });
+function drawBasic() {
 
-        // Create a pie chart, passing some options
-        var pieChart = new google.visualization.ChartWrapper({
-          'chartType': 'PieChart',
-          'containerId': 'chart_div1',
-          'options': {
-            'width': 300,
-            'height': 300,
-            'pieSliceText': 'value',
-            'legend': 'right'
-          }
-        });
+    var data = google.visualization.arrayToDataTable([
+        ['City', '2010 Population', ],
+        ['New York City, NY', 8175000],
+        ['Los Angeles, CA', 3792000],
+        ['Chicago, IL', 2695000],
+        ['Houston, TX', 2099000],
+        ['Philadelphia, PA', 1526000]
+    ]);
 
-        // Establish dependencies, declaring that 'filter' drives 'pieChart',
-        // so that the pie chart will only display entries that are let through
-        // given the chosen slider range.
-        dashboard.bind(donutRangeSlider, pieChart);
+    var options = {
+        title: 'Population of Largest U.S. Cities',
+        chartArea: {
+            width: '50%'
+        },
+        hAxis: {
+            title: 'Total Population',
+            minValue: 0
+        },
+        vAxis: {
+            title: 'City'
+        }
+    };
 
-        // Draw the dashboard.
-        dashboard.draw(data);
-      }
-    </script>
-    <!-- google chart Dashboard -->
+    var chart = new google.visualization.BarChart(document.getElementById('chart_div1'));
+
+    chart.draw(data, options);
+}
+    </script>  
+     <!-- end google chart2 -->
+    <!-- google chart3 -->
+     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+     google.load('visualization', '1', {
+    packages: ['corechart', 'bar']
+});
+google.setOnLoadCallback(drawBasic);
+
+function drawBasic() {
+
+    var data = google.visualization.arrayToDataTable([
+        ['City', '2010 Population', ],
+        ['New York City, NY', 8175000],
+        ['Los Angeles, CA', 3792000],
+        ['Chicago, IL', 2695000],
+        ['Houston, TX', 2099000],
+        ['Philadelphia, PA', 1526000]
+    ]);
+
+    var options = {
+        title: 'Population of Largest U.S. Cities',
+        chartArea: {
+            width: '50%'
+        },
+        hAxis: {
+            title: 'Total Population',
+            minValue: 0
+        },
+        vAxis: {
+            title: 'City'
+        }
+    };
+
+    var chart = new google.visualization.BarChart(document.getElementById('chart_div3'));
+
+    chart.draw(data, options);
+}
+    </script>  
+     <!-- end google char3 -->
+  
+    <!-- google chart4 -->
+     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+     google.load('visualization', '1', {
+    packages: ['corechart', 'bar']
+});
+google.setOnLoadCallback(drawBasic);
+
+function drawBasic() {
+
+    var data = google.visualization.arrayToDataTable([
+        ['City', '2010 Population', ],
+        ['New York City, NY', 8175000],
+        ['Los Angeles, CA', 3792000],
+        ['Chicago, IL', 2695000],
+        ['Houston, TX', 2099000],
+        ['Philadelphia, PA', 1526000]
+    ]);
+
+    var options = {
+        title: 'Population of Largest U.S. Cities',
+        chartArea: {
+            width: '50%'
+        },
+        hAxis: {
+            title: 'Total Population',
+            minValue: 0
+        },
+        vAxis: {
+            title: 'City'
+        }
+    };
+
+    var chart = new google.visualization.BarChart(document.getElementById('chart_div4'));
+
+    chart.draw(data, options);
+}
+    </script>  
+     <!-- end google char4 -->
+
 </head>
 
 <body>
@@ -142,50 +216,50 @@
        
     </nav>
 
-     <!-- /.container -->
-    <div class="container">
+   <!-- graph container -->
+<div class="container">
 
-        <!-- Team Members Row -->
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <h2 class="page-header">Your Feed Nation</h2>
-            </div>
-            <div class="col-lg-5 col-sm-5 text-left">
-                <h3>MOST USED TAGS BY COUNTRY</h3>
-                <p>Hover over each country to see which is the most used tag, the info is being updated every minute</p>
-            </div>
-            <div class="col-lg-5 col-sm-5 text-center">
-                <div id="chart_div" style="width: 600px; height: 400px;"></div>
-            </div>
-            <div class="col-lg-1 col-sm-1 text-center">
-        </div>
+		<div class="row">
 
-        <hr>
-       </div>
-    </div>
+		<div class="borders col-xs-6">
 
-    <!-- /.container -->
+		<div id="chart_div"></div>
 
-<!-- /.Dashboard -->
-    <div class="container">
+		</div>
 
-        <!-- Team Members Row -->
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <h2 class="page-header"></h2>
-            </div>
-            <!--Div that will hold the dashboard-->
-    <div id="dashboard_div">
-      <!--Divs that will hold each control and chart-->
-      <div id="categoryPicker_div"></div>
-      <div id="filter_div"></div>
-      <div id="chart_div1"></div>
-    </div>
-    </div>
-    </div>    
+		<div class="borders col-xs-6">
 
-    <!-- /.dashboard -->
-<!-- Footer -->
+		<div id="chart_div1"></div>
+
+		</div>
+
+				</div>
+
+			</div>
+<div class="container">
+
+		<div class="row">
+
+		<div class="borders col-xs-6">
+
+		<div id="chart_div3"></div>
+
+		</div>
+
+		<div class="borders col-xs-6">
+
+		<div id="chart_div4"></div>
+
+		</div>
+
+				</div>
+
+			</div>
+
+		</div>
+<!-- graph container -->
+
+    <!-- Footer -->
         <footer>
             <div class="container">
                  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
