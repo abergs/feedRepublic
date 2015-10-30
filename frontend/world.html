@@ -24,124 +24,85 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-     <!-- google chart1 -->
-     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+      <!-- GOOGLE CHART/ -->
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">
-     google.load('visualization', '1', {
-    packages: ['corechart', 'bar']
-});
-google.setOnLoadCallback(drawBasic);
-
-function drawBasic() {
-
-    var data = google.visualization.arrayToDataTable([
-        ['City', '2010 Population', ],
-        ['New York City, NY', 8175000],
-        ['Los Angeles, CA', 3792000],
-        ['Chicago, IL', 2695000],
-        ['Houston, TX', 2099000],
-        ['Philadelphia, PA', 1526000]
-    ]);
-
-    var options = {
-        title: 'Population of Largest U.S. Cities',
-        chartArea: {
-            width: '50%'
-        },
-        hAxis: {
-            title: 'Total Population',
-            minValue: 0
-        },
-        vAxis: {
-            title: 'City'
-        }
-    };
-
-    var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
-
-    chart.draw(data, options);
-}
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+            
+            var username = "abergs";
+            $.getJSON( "http://feedrepublic.azurewebsites.net/api/popular-hashtags-global/", function( data ) {
+                 // put data into the graph                  
+                 data= data.slice(0,5);
+                 data.unshift(["filter","number"]);
+                 var dataTable = google.visualization.arrayToDataTable(data);
+                  
+                    var options = {
+                        title: 'Most popular hashtag global',
+                        pieHole: 0.4,
+                    };
+                 
+                 var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+                chart.draw(dataTable, options);
+                 
+             });
+      }
     </script>  
-     <!-- end google chart1 -->
+    <!-- GOOGLE CHART -->
      
-     <!-- google chart2 -->
-     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+       <!-- GOOGLE CHART1/ -->
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">
-     google.load('visualization', '1', {
-    packages: ['corechart', 'bar']
-});
-google.setOnLoadCallback(drawBasic);
-
-function drawBasic() {
-
-    var data = google.visualization.arrayToDataTable([
-        ['City', '2010 Population', ],
-        ['New York City, NY', 8175000],
-        ['Los Angeles, CA', 3792000],
-        ['Chicago, IL', 2695000],
-        ['Houston, TX', 2099000],
-        ['Philadelphia, PA', 1526000]
-    ]);
-
-    var options = {
-        title: 'Population of Largest U.S. Cities',
-        chartArea: {
-            width: '50%'
-        },
-        hAxis: {
-            title: 'Total Population',
-            minValue: 0
-        },
-        vAxis: {
-            title: 'City'
-        }
-    };
-
-    var chart = new google.visualization.BarChart(document.getElementById('chart_div1'));
-
-    chart.draw(data, options);
-}
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+            
+            var username = "abergs";
+            $.getJSON( "http://feedrepublic.azurewebsites.net/api/popular-topics-global/", function( data ) {
+                 // put data into the graph                  
+                 data= data.slice(0,5);
+                 data.unshift(["filter","number"]);
+                 var dataTable = google.visualization.arrayToDataTable(data);
+                  
+                    var options = {
+                        title: 'Most popular topic globally',
+                        pieHole: 0.4,
+                    };
+                 
+                 var chart = new google.visualization.BarChart(document.getElementById('chart_div1'));
+                chart.draw(dataTable, options);
+                 
+             });
+      }
     </script>  
-     <!-- end google chart2 -->
-    <!-- google chart3 -->
-     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <!-- GOOGLE CHART1 -->
+            <!-- GOOGLE CHART2/ -->
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">
-     google.load('visualization', '1', {
-    packages: ['corechart', 'bar']
-});
-google.setOnLoadCallback(drawBasic);
-
-function drawBasic() {
-
-    var data = google.visualization.arrayToDataTable([
-        ['City', '2010 Population', ],
-        ['New York City, NY', 8175000],
-        ['Los Angeles, CA', 3792000],
-        ['Chicago, IL', 2695000],
-        ['Houston, TX', 2099000],
-        ['Philadelphia, PA', 1526000]
-    ]);
-
-    var options = {
-        title: 'Population of Largest U.S. Cities',
-        chartArea: {
-            width: '50%'
-        },
-        hAxis: {
-            title: 'Total Population',
-            minValue: 0
-        },
-        vAxis: {
-            title: 'City'
-        }
-    };
-
-    var chart = new google.visualization.BarChart(document.getElementById('chart_div3'));
-
-    chart.draw(data, options);
-}
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+            
+            var username = "abergs";
+            $.getJSON( "http://feedrepublic.azurewebsites.net/api/popular-filters-global/", function( data ) {
+                 // put data into the graph                  
+                 data= data.slice(0,5);
+                 data.unshift(["filter","number"]);
+                 var dataTable = google.visualization.arrayToDataTable(data);
+                  
+                    var options = {
+                        title: 'Most popular filter globally',
+                        pieHole: 0.4,
+                    };
+                 
+                 var chart = new google.visualization.BarChart(document.getElementById('chart_div2'));
+                chart.draw(dataTable, options);
+                 
+             });
+      }
     </script>  
-     <!-- end google char3 -->
+    <!-- GOOGLE CHART2 -->
   
     <!-- google chart4 -->
      <script type="text/javascript" src="https://www.google.com/jsapi"></script>
@@ -242,7 +203,7 @@ function drawBasic() {
 
 		<div class="borders col-xs-6">
 
-		<div id="chart_div3"></div>
+		<div id="chart_div2"></div>
 
 		</div>
 
