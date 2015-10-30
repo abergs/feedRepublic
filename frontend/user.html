@@ -85,19 +85,19 @@
       google.setOnLoadCallback(drawChart);
       function drawChart() {
           
-            var username = "abergs";
-            $.getJSON( "http://feedrepublic.azurewebsites.net/api/popular-topics/"+username, function( data ) {
+            var username = "perrogitano";
+            $.getJSON( "http://feedrepublic.azurewebsites.net/api/liers/"+username, function( data ) {
                  // put data into the graph
                  data= data.slice(0,5);
                  data.unshift(["filter","number"]);
                  var dataTable = google.visualization.arrayToDataTable(data);
                   
                     var options = {
-                        title: 'Most common topics',
+                        title: '#nofilter Liers',
                         pieHole: 0.4,
                     };
                  
-                 var chart = new google.visualization.PieChart(document.getElementById('donutchart3'));
+                 var chart = new google.visualization.LineChart(document.getElementById('donutchart3'));
                 chart.draw(dataTable, options);
                  
              });
@@ -189,8 +189,31 @@
         </div>
         <!-- /.container -->
     </nav>
+<br>
+           <!-- /.Refresh Button -->
+<div class="container" >
 
-    <!-- Page Content -->
+		<div class="row">
+
+		<div class="borders col-xs-5">
+
+		</div>
+        <div class="borders col-xs-2">
+    <FORM>
+<INPUT TYPE="button" onClick="history.go(0)" VALUE="load more data">
+</FORM>
+
+		</div>
+		<div class="borders col-xs-5">
+		
+		</div>
+
+				</div>
+
+			</div>
+			   <!-- Refresh Button -->    
+    <br>
+               <!-- Page Content -->
     <div class="container">
 
 		<div class="row">
