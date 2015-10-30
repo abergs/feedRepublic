@@ -10,6 +10,12 @@ background: -ms-linear-gradient(top,  #a0e6d9 0%,#1ecad0 0%,#2b356d 0%,#9ee4d7 5
 background: linear-gradient(to bottom,  #a0e6d9 0%,#1ecad0 0%,#2b356d 0%,#9ee4d7 5%,#99e5da 5%,#9ae4d9 7%,#93dfd1 8%,#93dfd4 8%,#90dcce 8%,#8fddd0 9%,#88dacb 11%,#86dcce 12%,#80d4c3 13%,#7ed6c4 14%,#7bd7c8 15%,#74d4c1 15%,#7bd7c8 15%,#70d4c0 17%,#68d6be 17%,#5fd7bd 18%,#38e6c0 22%,#41e1c1 22%,#37e5c2 23%,#3ae6c7 23%,#44e0c6 24%,#3ce2c9 25%,#3ce0c2 25%,#2fe5c1 26%,#2de5c0 27%,#2fe5c7 28%,#2de5c6 28%,#24e4ca 29%,#2fe1c6 30%,#24e4ca 34%,#21e1ca 35%,#20e4cd 35%,#1ddfcf 37%,#58dccd 37%,#37c6cd 40%,#1dd9d6 40%,#1dbcc7 46%,#209db6 49%,#1da6bb 49%,#269eb6 49%,#1c96b4 51%,#187cae 54%,#207caa 54%,#1a70a6 55%,#1e6da6 55%,#1965a3 57%,#23609d 58%,#1467a2 59%,#135699 62%,#21cccf 67%,#21cccf 67%,#134c9b 74%,#237eaf 78%,#1b4289 81%,#21307b 83%,#21307b 83%,#21307b 89%,#2b356d 95%,#2b356d 95%); /* W3C */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a0e6d9', endColorstr='#2b356d',GradientType=0 ); /* IE6-9 */
 }
+.Mac{margin:20 auto;width: 600px;height: 600px;font-color:black;border-color:#8EA8A3;
+box-shadow: inset 0 0 100 #8EA8A3;padding-left: 30px;
+  padding-right: 30px;padding-top:40px; margin-top: 30px; margin-bottom: 30px;
+opacity:0.8;font-size:21px; font-color:black; font-weight: bolder;text-align:justify;
+}
+.one,{text-align: justify;}
 
 
 /*!
