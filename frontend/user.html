@@ -27,11 +27,19 @@
     <!-- GOOGLE CHART1/FEDJA -->
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">
+    function getParameterByName(name) {
+        name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+        var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+        return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+    }
+       var username = getParameterByName('user');
+        
       google.load("visualization", "1", {packages:["corechart"]});
       google.setOnLoadCallback(drawChart);
       function drawChart() {
             
-            var username = "abergs";
+            
             $.getJSON( "http://feedrepublic.azurewebsites.net/api/popular-topics/"+username, function( data ) {
                  // put data into the graph                  
                  data= data.slice(0,5);
@@ -58,7 +66,7 @@
       google.setOnLoadCallback(drawChart);
       function drawChart() {
           
-            var username = "abergs";
+            
             $.getJSON( "http://feedrepublic.azurewebsites.net/api/popular-filters/"+username, function( data ) {
                  // put data into the graph
                  data= data.slice(0,5);
@@ -84,20 +92,19 @@
       google.load("visualization", "1", {packages:["corechart"]});
       google.setOnLoadCallback(drawChart);
       function drawChart() {
-          
-            var username = "abergs";
-            $.getJSON( "http://feedrepublic.azurewebsites.net/api/popular-topics/"+username, function( data ) {
+    
+            $.getJSON( "http://feedrepublic.azurewebsites.net/api/liers/"+username, function( data ) {
                  // put data into the graph
                  data= data.slice(0,5);
                  data.unshift(["filter","number"]);
                  var dataTable = google.visualization.arrayToDataTable(data);
                   
                     var options = {
-                        title: 'Most common topics',
+                        title: '#nofilter Liers',
                         pieHole: 0.4,
                     };
                  
-                 var chart = new google.visualization.PieChart(document.getElementById('donutchart3'));
+                 var chart = new google.visualization.LineChart(document.getElementById('donutchart3'));
                 chart.draw(dataTable, options);
                  
              });
@@ -110,16 +117,14 @@
       google.load("visualization", "1", {packages:["corechart"]});
       google.setOnLoadCallback(drawChart);
       function drawChart() {
-          
-            var username = "abergs";
-            $.getJSON( "http://feedrepublic.azurewebsites.net/api/popular-topics/"+username, function( data ) {
+            $.getJSON( "http://feedrepublic.azurewebsites.net/api/popular-hashtags/"+username, function( data ) {
                  // put data into the graph
                  data= data.slice(0,5);
-                 data.unshift(["filter","number"]);
+                 data.unshift(["Hashtag","number"]);
                  var dataTable = google.visualization.arrayToDataTable(data);
                   
                     var options = {
-                        title: 'Most common topics',
+                        title: 'Most common Hashtag',
                         pieHole: 0.4,
                     };
                  
@@ -130,33 +135,6 @@
       }
     </script>
     <!-- GOOGLE CHART4 -->
-    <!-- GOOGLE CHART5 -->
-    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-    <script type="text/javascript">
-      google.load("visualization", "1", {packages:["corechart"]});
-      google.setOnLoadCallback(drawChart);
-      function drawChart() {
-          
-            var username = "abergs";
-            $.getJSON( "http://feedrepublic.azurewebsites.net/api/popular-topics/"+username, function( data ) {
-                 // put data into the graph
-                 data= data.slice(0,5);
-                 data.unshift(["filter","number"]);
-                 var dataTable = google.visualization.arrayToDataTable(data);
-                  
-                    var options = {
-                        title: 'Most common topics',
-                        pieHole: 0.4,
-                    };
-                 
-                 var chart = new google.visualization.PieChart(document.getElementById('donutchart5'));
-                chart.draw(dataTable, options);
-                 
-             });
-      }
-    </script>
-    <!-- GOOGLE CHART5 -->
-
 </head>
 
 <body>
@@ -189,8 +167,31 @@
         </div>
         <!-- /.container -->
     </nav>
+<br>
+           <!-- /.Refresh Button -->
+<div class="container" >
 
-    <!-- Page Content -->
+		<div class="row">
+
+		<div class="borders col-xs-5">
+
+		</div>
+        <div class="borders col-xs-2">
+    <FORM>
+<INPUT TYPE="button" onClick="history.go(0)" VALUE="Loading more data... click to refresh">
+</FORM>
+
+		</div>
+		<div class="borders col-xs-5">
+		
+		</div>
+
+				</div>
+
+			</div>
+			   <!-- Refresh Button -->    
+    <br>
+               <!-- Page Content -->
     <div class="container">
 
 		<div class="row">
@@ -236,8 +237,6 @@
 		<div class="row">
 
 		<div class="borders col-xs-6">
-
-		<div id="donutchart5" style="width: 500px; height: 300px;"></div>
 
 		</div>
 
