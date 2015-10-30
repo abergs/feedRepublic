@@ -27,11 +27,19 @@
     <!-- GOOGLE CHART1/FEDJA -->
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">
+    function getParameterByName(name) {
+        name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+        var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+        return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+    }
+       var username = getParameterByName('user');
+        
       google.load("visualization", "1", {packages:["corechart"]});
       google.setOnLoadCallback(drawChart);
       function drawChart() {
             
-            var username = "abergs";
+            
             $.getJSON( "http://feedrepublic.azurewebsites.net/api/popular-topics/"+username, function( data ) {
                  // put data into the graph                  
                  data= data.slice(0,5);
@@ -58,7 +66,7 @@
       google.setOnLoadCallback(drawChart);
       function drawChart() {
           
-            var username = "abergs";
+            
             $.getJSON( "http://feedrepublic.azurewebsites.net/api/popular-filters/"+username, function( data ) {
                  // put data into the graph
                  data= data.slice(0,5);
@@ -84,8 +92,7 @@
       google.load("visualization", "1", {packages:["corechart"]});
       google.setOnLoadCallback(drawChart);
       function drawChart() {
-          
-            var username = "perrogitano";
+    
             $.getJSON( "http://feedrepublic.azurewebsites.net/api/liers/"+username, function( data ) {
                  // put data into the graph
                  data= data.slice(0,5);
@@ -111,7 +118,6 @@
       google.setOnLoadCallback(drawChart);
       function drawChart() {
           
-            var username = "abergs";
             $.getJSON( "http://feedrepublic.azurewebsites.net/api/popular-topics/"+username, function( data ) {
                  // put data into the graph
                  data= data.slice(0,5);
@@ -137,8 +143,7 @@
       google.setOnLoadCallback(drawChart);
       function drawChart() {
           
-            var username = "abergs";
-            $.getJSON( "http://feedrepublic.azurewebsites.net/api/popular-topics/"+username, function( data ) {
+                 $.getJSON( "http://feedrepublic.azurewebsites.net/api/popular-topics/"+username, function( data ) {
                  // put data into the graph
                  data= data.slice(0,5);
                  data.unshift(["filter","number"]);
