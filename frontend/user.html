@@ -96,7 +96,7 @@
             $.getJSON( "http://feedrepublic.azurewebsites.net/api/liers/"+username, function( data ) {
                  // put data into the graph
                  data= data.slice(0,5);
-                 data.unshift(["filter","number"]);
+                 data.unshift(["Liars","Honest"]);
                  var dataTable = google.visualization.arrayToDataTable(data);
                   
                     var options = {
@@ -104,7 +104,7 @@
                         pieHole: 0.4,
                     };
                  
-                 var chart = new google.visualization.LineChart(document.getElementById('donutchart3'));
+                 var chart = new google.visualization.PieChart(document.getElementById('donutchart3'));
                 chart.draw(dataTable, options);
                  
              });
