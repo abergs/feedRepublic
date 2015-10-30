@@ -176,16 +176,25 @@
 
 		<div class="row">
 
-		<div class="borders col-xs-5">
+		<div class="borders col-xs-3">
 
 		</div>
-        <div class="borders col-xs-2">
-    <FORM>
-<INPUT TYPE="button" onClick="history.go(0)" VALUE="Loading more data... click to refresh">
-</FORM>
+        <div class="borders col-xs-6" style="text-align:center">
+    <style>
 
+    .loadingbutton {
+      padding: 10px 20px;
+      background: orange none repeat scroll 0% 0%;
+      border: 1px solid darkorange;
+      border-radius: 5px;
+      box-shadow: 1px 1px 5px rgb(113, 110, 109);
+      color:#333;
+    }
+
+</style>
+    <a class="loadingbutton" href="#" onClick="history.go(0)"><img src="ajax-loader.gif" /> Loading data... CLICK HERE to refresh</a>
 		</div>
-		<div class="borders col-xs-5">
+		<div class="borders col-xs-3">
 		
 		</div>
 
