@@ -33,7 +33,10 @@
         results = regex.exec(location.search);
         return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
     }
-       var username = getParameterByName('user');
+        var username = getParameterByName('user') || sessionStorage.getItem("username");
+        if(sessionStorage){          
+          sessionStorage.setItem("username", username);
+        }
         
       google.load("visualization", "1", {packages:["corechart"]});
       google.setOnLoadCallback(drawChart);
