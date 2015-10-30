@@ -31,11 +31,10 @@
       google.setOnLoadCallback(drawChart);
       function drawChart() {
             
-            var username = "abergs";
             $.getJSON( "http://feedrepublic.azurewebsites.net/api/popular-hashtags-global/", function( data ) {
                  // put data into the graph                  
                  data= data.slice(0,5);
-                 data.unshift(["filter","number"]);
+                 data.unshift(["hashtag","number"]);
                  var dataTable = google.visualization.arrayToDataTable(data);
                   
                     var options = {
@@ -58,7 +57,6 @@
       google.setOnLoadCallback(drawChart);
       function drawChart() {
             
-            var username = "abergs";
             $.getJSON( "http://feedrepublic.azurewebsites.net/api/popular-topics-global/", function( data ) {
                  // put data into the graph                  
                  data= data.slice(0,5);
@@ -84,7 +82,6 @@
       google.setOnLoadCallback(drawChart);
       function drawChart() {
             
-            var username = "abergs";
             $.getJSON( "http://feedrepublic.azurewebsites.net/api/popular-filters-global/", function( data ) {
                  // put data into the graph                  
                  data= data.slice(0,5);
@@ -111,7 +108,6 @@
       google.setOnLoadCallback(drawChart);
       function drawChart() {
             
-            var username = "abergs";
             $.getJSON( "http://feedrepublic.azurewebsites.net/api/liers-global/", function( data ) {
                  // put data into the graph                  
                  data= data.slice(0,5);

@@ -12,10 +12,6 @@
     <link rel="icon" href="../../favicon.ico">
 
     <title>FeedRepublic</title>
-    
-      <!-- chartist CSS -->
-    <link rel="stylesheet" href="chartist.js/chartist.min.css">
-    <script src="chartist.js/chartist.min.js"></script> 
       
       <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -147,15 +143,14 @@
       google.setOnLoadCallback(drawChart);
       function drawChart() {
           
-            var username = "abergs";
-            $.getJSON( "http://feedrepublic.azurewebsites.net/api/popular-topics/"+username, function( data ) {
+            $.getJSON( "http://feedrepublic.azurewebsites.net/api/popular-filters-global/", function( data ) {
                  // put data into the graph
                  data= data.slice(0,5);
                  data.unshift(["filter","number"]);
                  var dataTable = google.visualization.arrayToDataTable(data);
                   
                     var options = {
-                        title: 'Most common topics',
+                        title: 'Most common filter Worldwide',
                         pieHole: 0.4,
                     };
                  
@@ -174,15 +169,14 @@
       function drawChart() {
           
           
-          var username = "abergs";
-            $.getJSON( "http://feedrepublic.azurewebsites.net/api/popular-topics/"+username, function( data ) {
+            $.getJSON( "http://feedrepublic.azurewebsites.net/api/popular-hashtags-global/", function( data ) {
                  // put data into the graph
                  data= data.slice(0,5);
-                 data.unshift(["filter","number"]);
+                 data.unshift(["Hashtag","number"]);
                  var dataTable = google.visualization.arrayToDataTable(data);
                     
                     var options = {
-                        title: 'Most common topics',
+                        title: 'Most common Hashtag Globally',
                         pieHole: 0.4,
                     };
                  
