@@ -19,9 +19,9 @@ text-align: center;}
   border: 1px solid #fff;
 }
 
-.Mac{margin: auto;
+.Mac{margin-top:0 auto;margin-left:70px;margin-bottom: 0 auto;
 width: 80%;
-text-align: auto;}
+text-align: auto;border-left:3px solid #2E5CB8;border-right:3px solid #2E5CB8;border-left-style: dashed;border-right-style: dashed}
 
 
 /*
