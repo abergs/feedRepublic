@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Round About - Start Bootstrap Template</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/round-about.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+      <!-- GOOGLE CHART/ -->
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+            
+            $.getJSON( "http://feedrepublic.azurewebsites.net/api/popular-hashtags-global/", function( data ) {
+                 // put data into the graph                  
+                 data= data.slice(0,5);
+                 data.unshift(["hashtag","number"]);
+                 var dataTable = google.visualization.arrayToDataTable(data);
+                  
+                    var options = {
+                        title: 'Most popular hashtag global',
+                        pieHole: 0.4,
+                    };
+                 
+                 var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+                chart.draw(dataTable, options);
+                 
+             });
+      }
+    </script>  
+    <!-- GOOGLE CHART -->
+     
+       <!-- GOOGLE CHART1/ -->
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+            
+            $.getJSON( "http://feedrepublic.azurewebsites.net/api/popular-topics-global/", function( data ) {
+                 // put data into the graph                  
+                 data= data.slice(0,5);
+                 data.unshift(["filter","number"]);
+                 var dataTable = google.visualization.arrayToDataTable(data);
+                  
+                    var options = {
+                        title: 'Most popular topic globally',
+                        pieHole: 0.4,
+                    };
+                 
+                 var chart = new google.visualization.PieChart(document.getElementById('chart_div1'));
+                chart.draw(dataTable, options);
+                 
+             });
+      }
+    </script>  
+    <!-- GOOGLE CHART1 -->
+            <!-- GOOGLE CHART2/ -->
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+            
+            $.getJSON( "http://feedrepublic.azurewebsites.net/api/popular-filters-global/", function( data ) {
+                 // put data into the graph                  
+                 data= data.slice(0,5);
+                 data.unshift(["filter","number"]);
+                 var dataTable = google.visualization.arrayToDataTable(data);
+                  
+                    var options = {
+                        title: 'Most popular filter globally',
+                        pieHole: 0.4,
+                    };
+                 
+                 var chart = new google.visualization.PieChart(document.getElementById('chart_div2'));
+                chart.draw(dataTable, options);
+                 
+             });
+      }
+    </script>  
+    <!-- GOOGLE CHART2 -->
+  
+    <!-- google chart3 -->
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+            
+            $.getJSON( "http://feedrepublic.azurewebsites.net/api/liers-global/", function( data ) {
+                 // put data into the graph                  
+                 data= data.slice(0,5);
+                 data.unshift(["filter","number"]);
+                 var dataTable = google.visualization.arrayToDataTable(data);
+                  
+                    var options = {
+                        title: 'Biggest #nofilter liers globally',
+                        pieHole: 0.4,
+                    };
+                 
+                 var chart = new google.visualization.PieChart(document.getElementById('chart_div3'));
+                chart.draw(dataTable, options);
+                 
+             });
+      }
+    </script>  
+     <!-- end google char3 -->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="page-header fawzy" role="navigation">
+        <div class="container fawzy">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="row">
+  <div class="col-xs-6 col-md-4" align="center">
+    <a href="#" class="media">
+      <img src="images/Instagram.badge.png" alt="instagram-badge"><br>username
+    </a>
+  </div>
+  <div class="col-xs-6 col-md-4">
+      <a href="#" class="media">
+      <img src="images/feedrepublic1.png" alt="">
+    </a>
+  </div>
+  <div class="col-xs-6 col-md-4" align="center">
+      <a href="user.html" class="media">
+      <img src="images/2.png" alt="user stats"><br>user stats
+    </a>
+  </div>
+                </li>
+                    
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+       
+    </nav>
+
+   <!-- graph container -->
+<div class="container">
+
+		<div class="row">
+
+		<div class="borders col-xs-6">
+
+		<div id="chart_div"></div>
+
+		</div>
+
+		<div class="borders col-xs-6">
+
+		<div id="chart_div1"></div>
+
+		</div>
+
+				</div>
+
+			</div>
+<div class="container">
+
+		<div class="row">
+
+		<div class="borders col-xs-6">
+
+		<div id="chart_div2"></div>
+
+		</div>
+
+		<div class="borders col-xs-6">
+
+		<div id="chart_div3"></div>
+
+		</div>
+
+				</div>
+
+			</div>
+
+		</div>
+<!-- graph container -->
+
+    <!-- Footer -->
+        <footer>
+            <div class="container">
+                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><div class="bullet"></div><a href="index.html">Home</a></li>
+        <li><div class="bullet"></div><a href="about.html">About Us</a></li>
+    
+        <li><div class="bullet"></div><a href="contacts.html">Contact</a><div class="bullet"></div></li>
+      </ul>
+                 </div>
+            <!-- /.row -->
+        </footer>
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
